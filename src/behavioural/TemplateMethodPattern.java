@@ -10,8 +10,8 @@ package behavioural;
 public class TemplateMethodPattern {
 
   public static void main(String[] args) {
-    Template concreteOne = new ConcreteOne();
-    Template concreteTwo = new ConcreteTwo();
+    TemplateMethod concreteOne = new ConcreteOne();
+    TemplateMethod concreteTwo = new ConcreteTwo();
 
     System.out.println("Execute ConcreteOne:");
     concreteOne.execute();
@@ -21,10 +21,10 @@ public class TemplateMethodPattern {
   }
 }
 
-abstract class Template {
+abstract class TemplateMethod {
 
   public void algorithmPartI() {
-    System.out.println("Part I: Template");
+    System.out.println("Part I: TemplateMethod");
   }
 
   abstract void algorithmPartII();
@@ -35,7 +35,7 @@ abstract class Template {
   }
 }
 
-class ConcreteOne extends Template {
+class ConcreteOne extends TemplateMethod {
 
   @Override
   void algorithmPartII() {
@@ -43,7 +43,7 @@ class ConcreteOne extends Template {
   }
 }
 
-class ConcreteTwo extends Template {
+class ConcreteTwo extends TemplateMethod {
 
   @Override
   void algorithmPartII() {
